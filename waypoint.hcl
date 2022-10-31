@@ -1,4 +1,4 @@
-project = "ami-ec2"
+project = "waypoint-ami-ec2"
 
 variable "aws_access_key" {
   type = string
@@ -14,7 +14,6 @@ variable "aws_session_token" {
   type = string
   env  = ["AWS_SESSION_TOKEN"]
 }
-
 
 app "ami-ec2" {
   labels = {
