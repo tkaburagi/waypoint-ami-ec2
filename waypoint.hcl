@@ -15,6 +15,11 @@ variable "aws_session_token" {
   env  = ["AWS_SESSION_TOKEN"]
 }
 
+variable "aws_session_expiration" {
+  type = string
+  env  = ["AWS_SESSION_EXPIRATION"]
+}
+
 app "ami-ec2" {
   labels = {
     "service" = "ami-ec2"
