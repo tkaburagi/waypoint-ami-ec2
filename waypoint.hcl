@@ -25,10 +25,14 @@ app "ami-ec2" {
     "service" = "ami-ec2"
   }
 
+  runner {
+    profile = "docker-01GHGJVSNHWXE3VFXX9BR1K9SN"
+  }
+
   build {
     use "aws-ami" {
       region = "ap-northeast-1"
-      name   = "apache2-initd"
+      name   = "ztna-connector-ami-2.10.0.1018-d4d78a70-ccbe-4173-8826-ab21f9f187fd"
     }
   }
 
@@ -38,7 +42,6 @@ app "ami-ec2" {
       instance_type = "t2.micro"
       service_port  = "80"
       extra_ports   = [22, 443]
-      key           = "hc-handson"
     }
   }
 
